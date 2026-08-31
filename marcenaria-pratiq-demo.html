@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marcenaria Pratiq — Móveis Planejados em Bauru</title>
+<meta name="description" content="Móveis planejados residenciais e comerciais em Bauru e região. Projetos sob medida com tradição, funcionalidade e acabamento impecável desde 1984.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17221d; --muted:#667068; --cream:#f5f3ed; --paper:#fbfaf7;
+  --green:#244b3a; --green2:#18362b; --sage:#bcc8bc; --line:#dedfd8;
+  --white:#fff; --shadow:0 20px 60px rgba(22,35,29,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Manrope",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;width:100%}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.topbar{background:var(--green2);color:#e9efe9;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:30;background:rgba(251,250,247,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(23,34,29,.08)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.logo{width:38px;height:38px;border-radius:50%;object-fit:cover;border:1px solid #d7dbd3}
+.brand-name{line-height:1} .brand-name strong{display:block;font-family:"Playfair Display",serif;font-size:20px;font-weight:600}
+.brand-name small{display:block;margin-top:5px;color:var(--muted);font-size:9px;letter-spacing:.18em;text-transform:uppercase}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:13px}
+.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 19px;border:1px solid var(--green);font-size:13px;font-weight:600;transition:.22s}
+.btn.primary{background:var(--green);color:white} .btn.primary:hover{background:var(--green2);transform:translateY(-1px)}
+.btn.light{border-color:#d9ddd6;background:white}
+.hero{min-height:720px;position:relative;display:grid;align-items:end;overflow:hidden;background:#1d2a24}
+.hero-bg{position:absolute;inset:0} .hero-bg img{height:100%;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,28,22,.78) 0%,rgba(14,28,22,.50) 43%,rgba(14,28,22,.08) 75%),linear-gradient(0deg,rgba(10,20,16,.55),transparent 50%)}
+.hero-content{position:relative;z-index:2;color:white;padding:110px 0 92px;max-width:720px}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:32px;height:1px;background:currentColor;opacity:.65}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(48px,6vw,82px);line-height:.98;font-weight:500;margin:20px 0 24px;letter-spacing:-.035em}
+.hero p{font-size:17px;line-height:1.7;max-width:580px;color:rgba(255,255,255,.84);margin:0 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn.primary{background:white;color:var(--green2);border-color:white}
+.hero .btn.secondary{color:white;border-color:rgba(255,255,255,.5)}
+.hero-proof{position:absolute;right:max(28px,calc((100vw - 1180px)/2));bottom:34px;z-index:3;color:white;display:flex;gap:28px;align-items:flex-end}
+.proof-item strong{font-family:"Playfair Display",serif;font-size:30px;font-weight:500;display:block} .proof-item span{font-size:10px;text-transform:uppercase;letter-spacing:.14em;opacity:.72}
+section{padding:110px 0}
+.intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:start}
+.section-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:700}
+.big-copy{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,54px);line-height:1.08;font-weight:500;letter-spacing:-.025em;margin:0}
+.intro-text{font-size:16px;line-height:1.85;color:var(--muted);max-width:600px;margin:24px 0 0}
+.values{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:60px}
+.value{padding:30px 28px 0 0;border-right:1px solid var(--line);min-height:145px} .value:last-child{border:0;padding-left:28px} .value:nth-child(2){padding-left:28px}
+.value .num{font-family:"Playfair Display",serif;font-size:34px;color:var(--green)} .value h4{font-size:14px;margin:8px 0} .value p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+.projects{background:var(--cream)}
+.projects-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
+.projects-head p{max-width:430px;color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 34px}
+.filter{border:1px solid #d9dcd5;background:transparent;border-radius:999px;padding:10px 15px;color:#5d675f;cursor:pointer;font-size:12px}
+.filter.active{background:var(--green);border-color:var(--green);color:white}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.project-card{cursor:pointer;outline:none}
+.project-card.hidden{display:none}
+.project-image{height:450px;position:relative;overflow:hidden;background:#d9ddd8}
+.project-image img{height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)} .project-card:hover img{transform:scale(1.035)}
+.image-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,20,16,.43),transparent 50%)}
+.project-tag{position:absolute;top:18px;left:18px;padding:8px 11px;background:rgba(251,250,247,.92);backdrop-filter:blur(10px);border-radius:99px;font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.view-project{position:absolute;bottom:20px;right:20px;color:white;font-size:12px;opacity:0;transform:translateY(5px);transition:.25s} .project-card:hover .view-project{opacity:1;transform:none}
+.project-copy{padding:20px 2px 22px} .project-copy h3{font-family:"Playfair Display",serif;font-size:25px;font-weight:500;margin:0 0 9px} .project-copy p{font-size:13px;color:var(--muted);line-height:1.65;margin:0;max-width:510px}
+.feature{padding:0;background:var(--green2);color:white}
+.feature-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:650px}
+.feature-image img{height:100%;object-fit:cover}
+.feature-copy{padding:90px clamp(40px,7vw,110px);display:flex;flex-direction:column;justify-content:center}
+.feature-copy .section-kicker{color:#bdcbbf} .feature-copy h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-height:1.06;font-weight:500;margin:16px 0 24px} .feature-copy p{color:rgba(255,255,255,.73);line-height:1.8;font-size:14px}
+.feature-list{margin:28px 0 35px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px} .feature-list li{font-size:12px;border-top:1px solid rgba(255,255,255,.15);padding-top:13px;color:#e9eee9}
+.feature .btn{align-self:flex-start;color:var(--green2);background:white;border-color:white}
+.process-head{max-width:700px;margin-bottom:54px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 28px 20px 0;border-right:1px solid var(--line);min-height:220px} .step:not(:first-child){padding-left:28px} .step:last-child{border-right:0}
+.step-num{font-family:"Playfair Display",serif;font-size:30px;color:#9aaa9c} .step h3{font-size:15px;margin:28px 0 10px} .step p{font-size:12px;color:var(--muted);line-height:1.7}
+.about{background:#eeece5}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.about-photo{position:relative} .about-photo img{height:520px;object-fit:cover} .about-badge{position:absolute;right:-22px;bottom:-22px;width:150px;height:150px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;text-align:center;font-family:"Playfair Display",serif;font-size:19px;line-height:1.15;padding:20px}
+.about-copy p{font-size:14px;color:var(--muted);line-height:1.85}
+.cta{padding:100px 0;background:var(--paper)} .cta-box{background:var(--green);color:white;padding:72px;display:flex;align-items:center;justify-content:space-between;gap:55px} .cta-box h2{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,54px);font-weight:500;line-height:1.05;margin:0 0 14px} .cta-box p{color:rgba(255,255,255,.72);font-size:14px;line-height:1.7;max-width:600px;margin:0} .cta-box .btn{background:white;color:var(--green2);border-color:white;white-space:nowrap}
+footer{background:#15241e;color:#dce5df;padding:58px 0 28px} .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:50px} .footer-brand p{max-width:380px;color:#8fa096;font-size:12px;line-height:1.8} footer h4{font-size:11px;text-transform:uppercase;letter-spacing:.16em;margin:4px 0 18px;color:#9fafA4} footer a,footer span{display:block;font-size:12px;margin:10px 0;color:#d0d9d3} .copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:45px;padding-top:22px;color:#778b7f;font-size:10px;display:flex;justify-content:space-between}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:40;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:white;box-shadow:0 12px 30px rgba(0,0,0,.22);font-weight:800;font-size:22px}
+.modal{position:fixed;inset:0;z-index:100;background:rgba(11,17,14,.94);display:none;overflow:auto;color:white} .modal.open{display:block}
+.modal-inner{width:min(1180px,calc(100% - 40px));margin:34px auto 70px} .modal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px} .modal-close{border:1px solid rgba(255,255,255,.3);color:white;background:transparent;border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:20px}
+.modal-gallery{display:grid;grid-template-columns:1.5fr .8fr;grid-template-rows:280px 280px;gap:8px} .modal-gallery img{height:100%;object-fit:cover} .modal-gallery img:first-child{grid-row:1/3} .modal-gallery img:nth-child(n+4){display:none}
+.modal-info{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;padding:34px 0} .modal-info h2{font-family:"Playfair Display",serif;font-weight:500;font-size:40px;margin:0 0 12px} .modal-info p{color:#afbbb4;line-height:1.7;max-width:760px;font-size:13px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s} .reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+ .navlinks a:not(.btn){display:none} .hero{min-height:680px} .hero-proof{display:none}
+ .intro-grid,.about-grid{grid-template-columns:1fr;gap:35px} .project-grid{grid-template-columns:1fr}
+ .feature-wrap{grid-template-columns:1fr} .feature-image{height:480px} .values{grid-template-columns:1fr} .value,.value:nth-child(2),.value:last-child{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+ .steps{grid-template-columns:1fr 1fr} .step{border-bottom:1px solid var(--line)} .projects-head{display:block} .projects-head p{margin-top:20px}
+ .cta-box{padding:48px 34px;display:block} .cta-box .btn{margin-top:28px}
+ .footer-grid{grid-template-columns:1fr 1fr} .footer-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .container{width:min(100% - 28px,1180px)} .topbar{font-size:9px} .nav{height:66px} .brand-name small{display:none} .nav .btn{padding:10px 13px;font-size:11px}
+ .hero{min-height:620px} .hero-content{padding:90px 0 62px} .hero h1{font-size:49px} .hero p{font-size:14px}
+ section{padding:76px 0} .project-image{height:380px} .feature-image{height:390px} .feature-copy{padding:60px 24px}
+ .steps{grid-template-columns:1fr} .step,.step:not(:first-child){padding:24px 0;border-right:0} .about-photo img{height:410px} .about-badge{right:12px}
+ .cta{padding:65px 0} .cta-box{padding:42px 24px} .footer-grid{grid-template-columns:1fr}
+ .modal-gallery{display:block} .modal-gallery img{height:auto;margin-bottom:8px} .modal-gallery img:nth-child(n+4){display:block} .modal-info{grid-template-columns:1fr} .modal-info h2{font-size:32px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">Móveis planejados residenciais e comerciais • Bauru e região</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img class="logo" src="https://scontent-fra3-2.cdninstagram.com/v/t51.2885-19/457141609_8171318722928624_9114426885019339713_n.jpg?_nc_cat=111&amp;ccb=7-5&amp;_nc_sid=bf7eb4&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy41MDAuQzMifQ%3D%3D&amp;_nc_ohc=36eNogjlSRkQ7kNvwFqU-y4&amp;_nc_oc=AdpaFSxV4U32dYaeyUTTFCpALkOOgc7hWcXQP8h-8fUIem_3hReWsDiW_oFJQkV-3rKH0hGK4en9n_N2c6sQ2VTt&amp;_nc_zt=24&amp;_nc_ht=scontent-fra3-2.cdninstagram.com&amp;_nc_ss=7da8c&amp;oh=00_AQK6D8RDNQAyQq7DKp0aOnQGAip_iQKlnlDpWqMkvOSjqQ&amp;oe=6A9BCA06" alt="Marcenaria Pratiq" referrerpolicy="no-referrer">
+      <span class="brand-name"><strong>Pratiq</strong><small>Marcenaria sob medida</small></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#projetos">Projetos</a><a href="#processo">Como funciona</a><a href="#sobre">A Pratiq</a>
+      <a class="btn primary" target="_blank" href="https://wa.me/5514997940894?text=Olá%20Pratiq!%20Gostaria%20de%20solicitar%20um%20orçamento.">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg"><img src="https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642740383_18086583164337149_3151972567755723858_n.jpg?stp=dst-jpegr_e35_tt6&amp;_nc_cat=109&amp;ig_cache_key=Mzg0NjE0MzE5NjIxMjgzNDUxMw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&amp;_nc_ohc=xY_VhXbU-nQQ7kNvwGYx9ex&amp;_nc_oc=Ado87thuD3NH5R-fy-tBFz4RSEoOpdXOv1nqrCpAiwNohbt6tk0GlRVRMxOOFE3-WB0&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fpoz3-1.fna&amp;_nc_gid=9fgascQrR9CXqaqZkiUVrQ&amp;_nc_ss=7a22e&amp;oh=00_AQJ2gprNoL4Mg7GE90rSal0fyp4_e249p0EZrFZL9oIqKA&amp;oe=6A9BC8D0" alt="Projeto de móveis planejados Pratiq" referrerpolicy="no-referrer"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="eyebrow">Marcenaria sob medida em Bauru</div>
+    <h1>Seu ambiente,<br><em>pensado para você.</em></h1>
+    <p>Projetos personalizados que unem estética, funcionalidade e acabamento impecável. Móveis planejados para transformar a forma como você vive cada espaço.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#projetos">Conhecer projetos</a>
+      <a class="btn secondary" target="_blank" href="https://wa.me/5514997940894?text=Olá%20Pratiq!%20Gostaria%20de%20solicitar%20um%20orçamento.">Falar com a Pratiq ↗</a>
+    </div>
+  </div>
+  <div class="hero-proof"><div class="proof-item"><strong>1984</strong><span>Desde</span></div><div class="proof-item"><strong>40+</strong><span>Anos de experiência</span></div></div>
+</section>
+
+<section>
+ <div class="container">
+   <div class="intro-grid reveal">
+     <div><div class="section-kicker">Planejado de verdade</div></div>
+     <div>
+       <h2 class="big-copy">Não é só marcenaria.<br>É um projeto para a sua rotina.</h2>
+       <p class="intro-text">Cada móvel nasce a partir do espaço, das necessidades e do estilo de quem vai utilizá-lo. Da cozinha ao closet, da sala ao ambiente comercial, criamos soluções que aproveitam cada centímetro com personalidade.</p>
+       <div class="values">
+        <div class="value"><div class="num">01</div><h4>Projeto personalizado</h4><p>Soluções desenvolvidas para o seu ambiente, sem fórmulas prontas.</p></div>
+        <div class="value"><div class="num">02</div><h4>Acabamento cuidadoso</h4><p>Materiais, ferragens e detalhes pensados para um resultado elegante e durável.</p></div>
+        <div class="value"><div class="num">03</div><h4>Experiência desde 1984</h4><p>Tradição em móveis residenciais e comerciais em Bauru e região.</p></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="projects" id="projetos">
+ <div class="container">
+   <div class="projects-head reveal">
+    <div><div class="section-kicker">Portfólio Pratiq</div><h2 class="big-copy">Projetos que transformam<br>ambientes.</h2></div>
+    <p>Uma seleção de trabalhos reais. Explore cozinhas, dormitórios, salas e ambientes planejados desenvolvidos pela Pratiq.</p>
+   </div>
+   <div class="filters reveal">
+     <button class="filter active" data-filter="Todos">Todos</button>
+     <button class="filter" data-filter="Cozinhas">Cozinhas</button>
+     <button class="filter" data-filter="Dormitórios">Dormitórios</button>
+     <button class="filter" data-filter="Salas">Salas</button>
+     <button class="filter" data-filter="Home office">Home office</button>
+     <button class="filter" data-filter="Projetos completos">Projetos completos</button>
+   </div>
+   <div class="project-grid">
+     
+    <article class="project-card reveal" data-category="Cozinhas" onclick="openProject(0)" tabindex="0" role="button" aria-label="Ver projeto Cozinha Gianduia &amp; Itapuã">
+      <div class="project-image">
+        <img src="https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/689042483_18093545654337149_8934886898339032866_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=111&amp;ig_cache_key=Mzg5MTc0NjczNzE5OTQzOTcxNw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&amp;_nc_ohc=bTtlbHtoGJcQ7kNvwFip3oe&amp;_nc_oc=AdpHtZmnONj9tuNQyJ3ipr9k3QCLaVC6x2Fgd5nn26Agd5YGOMen4LtJSqW5l3Hfh60q215JnjhRdxUqG07nm6gt&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=scontent-ams2-1.cdninstagram.com&amp;_nc_gid=YG6hgSTDrXpengY6CO-qDg&amp;_nc_ss=7a22e&amp;oh=00_AQLIm_IrSEqQodTmT0a5__QRpXUloLnPOCiuJFG9uDTzlw&amp;oe=6A9BE122" alt="Cozinha Gianduia &amp; Itapuã" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Cozinhas</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Cozinha Gianduia &amp; Itapuã</h3>
+        <p>Elegância atemporal, iluminação em LED e porta reflecta em uma composição pensada para unir beleza e funcionalidade.</p>
+      </div>
+    </article>
+    
+    <article class="project-card reveal" data-category="Projetos completos" onclick="openProject(1)" tabindex="0" role="button" aria-label="Ver projeto Projeto Integrado Freijó &amp; Verde Jade">
+      <div class="project-image">
+        <img src="https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642740383_18086583164337149_3151972567755723858_n.jpg?stp=dst-jpegr_e35_tt6&amp;_nc_cat=109&amp;ig_cache_key=Mzg0NjE0MzE5NjIxMjgzNDUxMw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&amp;_nc_ohc=xY_VhXbU-nQQ7kNvwGYx9ex&amp;_nc_oc=Ado87thuD3NH5R-fy-tBFz4RSEoOpdXOv1nqrCpAiwNohbt6tk0GlRVRMxOOFE3-WB0&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fpoz3-1.fna&amp;_nc_gid=9fgascQrR9CXqaqZkiUVrQ&amp;_nc_ss=7a22e&amp;oh=00_AQJ2gprNoL4Mg7GE90rSal0fyp4_e249p0EZrFZL9oIqKA&amp;oe=6A9BC8D0" alt="Projeto Integrado Freijó &amp; Verde Jade" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Projetos completos</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Projeto Integrado Freijó &amp; Verde Jade</h3>
+        <p>Ambientes com identidade própria e harmonia visual, combinando tons naturais, personalidade e acabamento sob medida.</p>
+      </div>
+    </article>
+    
+    <article class="project-card reveal" data-category="Dormitórios" onclick="openProject(2)" tabindex="0" role="button" aria-label="Ver projeto Closet Planejado">
+      <div class="project-image">
+        <img src="https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623117433_18083271866337149_5135155682296685695_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=104&amp;ig_cache_key=MzgxOTk4NjE5MzU0MjU1MTQ0Mw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&amp;_nc_ohc=KeDQabQEUBsQ7kNvwG42WXB&amp;_nc_oc=AdowM4mvTrs8AaD53Rbp5_Kc4W7PBZl5ktqKt7fXnVVNr2z2L_5yG_h8k4Ez2yHvQeg&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fmao1-1.fna&amp;_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&amp;_nc_ss=7a22e&amp;oh=00_AQLzQsyFrH3rb5TIKDaVjiq_S3Ub4YJ7xU_3dk0NCBv9Cw&amp;oe=6A9BCCDE" alt="Closet Planejado" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Dormitórios</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Closet Planejado</h3>
+        <p>Divisões inteligentes, gavetas amplas, cabideiros funcionais e porta de correr para um dia a dia mais organizado.</p>
+      </div>
+    </article>
+    
+    <article class="project-card reveal" data-category="Cozinhas" onclick="openProject(3)" tabindex="0" role="button" aria-label="Ver projeto Cozinha Palha &amp; Itapuã">
+      <div class="project-image">
+        <img src="https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/657723175_18089702801337149_8310543643259892300_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=107&amp;ig_cache_key=Mzg2NDkzNTI4NjcwNzIzNDc1Mw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&amp;_nc_ohc=UhyXDcD7lfMQ7kNvwGeVWVV&amp;_nc_oc=AdpLnzG3QjaGkxylShMmNhLYFHbtoXdcnJy0hGxqiNxlh7NGZimI2jDNWHSPRpdqKcI&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=scontent-itm1-1.cdninstagram.com&amp;_nc_gid=ZBZqB-zrN_BA1B1Kl6Tymw&amp;_nc_ss=7a22e&amp;oh=00_AQJYyf7j0EZ8IdRtoFH-ESoU9J2WkBy-wMwwNoJIzbSTzQ&amp;oe=6A9BE3CD" alt="Cozinha Palha &amp; Itapuã" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Cozinhas</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Cozinha Palha &amp; Itapuã</h3>
+        <p>Tons claros e amadeirados criam um ambiente leve, sofisticado e acolhedor.</p>
+      </div>
+    </article>
+    
+    <article class="project-card reveal" data-category="Salas" onclick="openProject(4)" tabindex="0" role="button" aria-label="Ver projeto Painel Integrado para TV">
+      <div class="project-image">
+        <img src="https://instagram.fyto3-1.fna.fbcdn.net/v/t51.82787-15/587198150_18076810658337149_8579237252723999406_n.webp?_nc_cat=107&amp;ig_cache_key=Mzc3MDkwMDA3NjQyOTM4NjA2NA%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&amp;_nc_ohc=ki8Iu_Hx7t8Q7kNvwFP6c56&amp;_nc_oc=Adr-YCsXJkIdE3CRUEsje7fPvAARvuX5m4g0NaqK6aJL_Rchailzp6Iqql4xPrEgDmQ&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fyto3-1.fna&amp;_nc_gid=aqJpNnLlNgysMueXxqTdhg&amp;_nc_ss=7a22e&amp;oh=00_AQIj8nOy4D_bv_snZr7Yq1UH7xK8FtaQNntHOnOu2nIPXw&amp;oe=6A9BC419" alt="Painel Integrado para TV" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Salas</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Painel Integrado para TV</h3>
+        <p>Painel em alto brilho, ripado com porta integrada e rack em uma composição contínua e contemporânea.</p>
+      </div>
+    </article>
+    
+    <article class="project-card reveal" data-category="Home office" onclick="openProject(5)" tabindex="0" role="button" aria-label="Ver projeto Home Office Sob Medida">
+      <div class="project-image">
+        <img src="https://instagram.fcyw4-1.fna.fbcdn.net/v/t51.82787-15/584079366_18076813067337149_1761546204920758336_n.webp?_nc_cat=105&amp;ig_cache_key=Mzc3MDkxODQzMDI3NDgyMTk5Nw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&amp;_nc_ohc=ckJrc91JtbUQ7kNvwFyvd0X&amp;_nc_oc=AdrBLYykptHY3WMGJs1XDb4wi3YzDF3iFcBkqojUBDxVvdqjv28_d9mrQazD4mXK9nk&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fcyw4-1.fna&amp;_nc_gid=YwzaSILIOnl11e9Y8Xr--A&amp;_nc_ss=7a22e&amp;oh=00_AQIMBCmI9nyn_nkttYl6sHGZZErIJso0o4s8_MX7puVfrQ&amp;oe=6A9BBFD5" alt="Home Office Sob Medida" loading="lazy" referrerpolicy="no-referrer">
+        <div class="image-shade"></div>
+        <span class="project-tag">Home office</span>
+        <span class="view-project">Ver projeto <span>↗</span></span>
+      </div>
+      <div class="project-copy">
+        <h3>Home Office Sob Medida</h3>
+        <p>Bancada em L, prateleira flutuante e gaveteiro móvel com foco em ergonomia, organização e praticidade.</p>
+      </div>
+    </article>
+    
+   </div>
+ </div>
+</section>
+
+<section class="feature">
+ <div class="feature-wrap">
+  <div class="feature-image"><img src="https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/689042483_18093545654337149_8934886898339032866_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=111&amp;ig_cache_key=Mzg5MTc0NjczNzE5OTQzOTcxNw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&amp;_nc_ohc=bTtlbHtoGJcQ7kNvwFip3oe&amp;_nc_oc=AdpHtZmnONj9tuNQyJ3ipr9k3QCLaVC6x2Fgd5nn26Agd5YGOMen4LtJSqW5l3Hfh60q215JnjhRdxUqG07nm6gt&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=scontent-ams2-1.cdninstagram.com&amp;_nc_gid=YG6hgSTDrXpengY6CO-qDg&amp;_nc_ss=7a22e&amp;oh=00_AQLIm_IrSEqQodTmT0a5__QRpXUloLnPOCiuJFG9uDTzlw&amp;oe=6A9BE122" alt="Cozinha planejada Pratiq" referrerpolicy="no-referrer"></div>
+  <div class="feature-copy reveal">
+    <div class="section-kicker">Detalhes que fazem diferença</div>
+    <h2>Funcionalidade com personalidade.</h2>
+    <p>Do contraste entre padrões de MDF à iluminação integrada, cada decisão é parte do projeto. O resultado são ambientes bonitos de ver e, principalmente, bons de viver.</p>
+    <ul class="feature-list"><li>Marcenaria sob medida</li><li>Iluminação integrada</li><li>Soluções funcionais</li><li>Acabamentos personalizados</li></ul>
+    <a class="btn" target="_blank" href="https://wa.me/5514997940894?text=Olá%20Pratiq!%20Vi%20os%20projetos%20no%20site%20e%20gostaria%20de%20fazer%20um%20orçamento.">Quero planejar meu ambiente ↗</a>
+  </div>
+ </div>
+</section>
+
+<section id="processo">
+ <div class="container">
+   <div class="process-head reveal"><div class="section-kicker">Do primeiro contato à instalação</div><h2 class="big-copy">Um projeto pensado<br>em cada etapa.</h2></div>
+   <div class="steps reveal">
+    <div class="step"><div class="step-num">01</div><h3>Conte sua ideia</h3><p>Fale com nossa equipe e compartilhe o ambiente, suas necessidades e referências.</p></div>
+    <div class="step"><div class="step-num">02</div><h3>Planejamento</h3><p>Estudamos medidas, materiais e soluções para aproveitar melhor cada espaço.</p></div>
+    <div class="step"><div class="step-num">03</div><h3>Produção</h3><p>Seu projeto ganha forma com atenção aos detalhes e ao acabamento.</p></div>
+    <div class="step"><div class="step-num">04</div><h3>Instalação</h3><p>A etapa final transforma o projeto em um ambiente pronto para fazer parte da sua rotina.</p></div>
+   </div>
+ </div>
+</section>
+
+<section class="about" id="sobre">
+ <div class="container about-grid">
+  <div class="about-photo reveal">
+    <img src="https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623117433_18083271866337149_5135155682296685695_n.jpg?stp=dst-jpg_e15_tt6&amp;_nc_cat=104&amp;ig_cache_key=MzgxOTk4NjE5MzU0MjU1MTQ0Mw%3D%3D.3-ccb7-5&amp;ccb=7-5&amp;_nc_sid=58cdad&amp;efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&amp;_nc_ohc=KeDQabQEUBsQ7kNvwG42WXB&amp;_nc_oc=AdowM4mvTrs8AaD53Rbp5_Kc4W7PBZl5ktqKt7fXnVVNr2z2L_5yG_h8k4Ez2yHvQeg&amp;_nc_ad=z-m&amp;_nc_cid=0&amp;_nc_zt=23&amp;_nc_ht=instagram.fmao1-1.fna&amp;_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&amp;_nc_ss=7a22e&amp;oh=00_AQLzQsyFrH3rb5TIKDaVjiq_S3Ub4YJ7xU_3dk0NCBv9Cw&amp;oe=6A9BCCDE" alt="Marcenaria planejada Pratiq" referrerpolicy="no-referrer">
+    <div class="about-badge">Desde<br>1984</div>
+  </div>
+  <div class="about-copy reveal">
+    <div class="section-kicker">Marcenaria Pratiq</div>
+    <h2 class="big-copy">Tradição artesanal.<br>Olhar contemporâneo.</h2>
+    <p>Há mais de quatro décadas, a Pratiq desenvolve móveis planejados residenciais e comerciais. A experiência acumulada ao longo dos anos se encontra com novas soluções, materiais e tendências para criar projetos personalizados, funcionais e duráveis.</p>
+    <p>Atendimento em Bauru e região, com projetos pensados para traduzir as necessidades de cada cliente em ambientes únicos.</p>
+    <a class="btn light" target="_blank" href="https://www.instagram.com/marcenariapratiq" style="margin-top:14px">Ver Instagram @marcenariapratiq ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container">
+  <div class="cta-box reveal">
+   <div><h2>Vamos transformar<br>seu ambiente?</h2><p>Envie sua ideia para a Pratiq e solicite um orçamento para móveis planejados residenciais ou comerciais.</p></div>
+   <a class="btn" target="_blank" href="https://wa.me/5514997940894?text=Olá%20Pratiq!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20projeto%20sob%20medida.">Solicitar orçamento no WhatsApp ↗</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand"><div class="brand-name"><strong style="color:white;font-size:28px">Pratiq</strong><small style="color:#90a097">Marcenaria sob medida</small></div><p>Móveis planejados residenciais e comerciais, unindo funcionalidade, beleza e durabilidade desde 1984.</p></div>
+   <div><h4>Contato</h4><a href="https://wa.me/5514997940894" target="_blank">(14) 99794-0894</a><a href="https://www.instagram.com/marcenariapratiq" target="_blank">@marcenariapratiq</a></div>
+   <div><h4>Endereço</h4><span>Rua Quinze de Novembro, 3-31<br>Centro • Bauru/SP</span><span>Bauru e região</span></div>
+  </div>
+  <div class="copyright"><span>© 2026 Marcenaria Pratiq</span><span>Demo de portfólio digital</span></div>
+ </div>
+</footer>
+
+<a class="whatsapp-float" aria-label="WhatsApp" target="_blank" href="https://wa.me/5514997940894?text=Olá%20Pratiq!%20Gostaria%20de%20solicitar%20um%20orçamento.">✆</a>
+
+<div class="modal" id="projectModal">
+ <div class="modal-inner">
+  <div class="modal-top"><div class="eyebrow">Projeto Pratiq</div><button class="modal-close" onclick="closeModal()">×</button></div>
+  <div class="modal-gallery" id="modalGallery"></div>
+  <div class="modal-info">
+   <div><h2 id="modalTitle"></h2><p id="modalDesc"></p></div>
+   <a class="btn primary" id="modalWhatsapp" target="_blank" href="#">Quero um projeto assim ↗</a>
+  </div>
+ </div>
+</div>
+
+<script>
+const projects=[{"code": "DYCQ2TDDjKC", "title": "Cozinha Gianduia & Itapuã", "category": "Cozinhas", "desc": "Elegância atemporal, iluminação em LED e porta reflecta em uma composição pensada para unir beleza e funcionalidade.", "caption": "Uma cozinha que fala por si só! 🥹\n\nA combinação do MDF Gianduia e Itapuã trouxe um contraste elegante e atemporal, valorizando cada detalhe do ambiente!\n\nA iluminação em LED entra como protagonista, destacando os acabamentos e criando uma atmosfera moderna e aconchegante!\n\nA porta reflecta complementa com sofisticação, além de ampliar visualmente o espaço! \n\nUma cozinha pensada para unir funcionalidade, beleza e um resultado impecável em cada detalhe!\n\n#MarcenariaSobMedida #PlanejadosComEstilo #MDF #MoveisPlanejados #interiores", "url": "https://www.instagram.com/p/DYCQ2TDDjKC/", "images": ["https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/689042483_18093545654337149_8934886898339032866_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&ig_cache_key=Mzg5MTc0NjczNzE5OTQzOTcxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=bTtlbHtoGJcQ7kNvwFip3oe&_nc_oc=AdpHtZmnONj9tuNQyJ3ipr9k3QCLaVC6x2Fgd5nn26Agd5YGOMen4LtJSqW5l3Hfh60q215JnjhRdxUqG07nm6gt&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=YG6hgSTDrXpengY6CO-qDg&_nc_ss=7a22e&oh=00_AQLIm_IrSEqQodTmT0a5__QRpXUloLnPOCiuJFG9uDTzlw&oe=6A9BE122", "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/686526397_18093545702337149_3497500416921800453_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=Mzg5MTc0NjgxMTY2NTEwNzYyNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=ZwadQI4dS6cQ7kNvwFiLi7l&_nc_oc=AdrJJcUq1_Ty4kxAe8n8H4UBs462gqeo78a6j6K7JYFmN8xKSDmy4VGczCWK6Hpod56Cw-Xea97wMF8dWm52UNmw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=YG6hgSTDrXpengY6CO-qDg&_nc_ss=7a22e&oh=00_AQJilvfQVLeUmTTdlOsZyZNJkr10ayDuqHdw5GJbkoDLmA&oe=6A9BBE42"], "cover": "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/689042483_18093545654337149_8934886898339032866_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&ig_cache_key=Mzg5MTc0NjczNzE5OTQzOTcxNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=bTtlbHtoGJcQ7kNvwFip3oe&_nc_oc=AdpHtZmnONj9tuNQyJ3ipr9k3QCLaVC6x2Fgd5nn26Agd5YGOMen4LtJSqW5l3Hfh60q215JnjhRdxUqG07nm6gt&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=YG6hgSTDrXpengY6CO-qDg&_nc_ss=7a22e&oh=00_AQLIm_IrSEqQodTmT0a5__QRpXUloLnPOCiuJFG9uDTzlw&oe=6A9BE122"}, {"code": "DVgPt7AjdpJ", "title": "Projeto Integrado Freijó & Verde Jade", "category": "Projetos completos", "desc": "Ambientes com identidade própria e harmonia visual, combinando tons naturais, personalidade e acabamento sob medida.", "caption": "Cada ambiente com sua identidade, mas todos em perfeita harmonia. 🤎\n\nNa cozinha, a combinação de Freijó Imperial com Verde Jade cria um contraste moderno e cheio de personalidade.\n\nNa sala e nos quartos, a proposta segue a mesma linha, destacando o amadeirado e valorizando o conforto e a elegância dos espaços.\n\nPara finalizar, os banheiros recebem o padrão Aurora, trazendo leveza e sofisticação ao projeto.\n\nUm apartamento planejado para unir estética, funcionalidade e bem-estar no dia a dia. 😌", "url": "https://www.instagram.com/p/DVgPt7AjdpJ/", "images": ["https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642740383_18086583164337149_3151972567755723858_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=109&ig_cache_key=Mzg0NjE0MzE5NjIxMjgzNDUxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=xY_VhXbU-nQQ7kNvwGYx9ex&_nc_oc=Ado87thuD3NH5R-fy-tBFz4RSEoOpdXOv1nqrCpAiwNohbt6tk0GlRVRMxOOFE3-WB0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQJ2gprNoL4Mg7GE90rSal0fyp4_e249p0EZrFZL9oIqKA&oe=6A9BC8D0", "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642755696_18086583173337149_8386194457044367087_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=110&ig_cache_key=Mzg0NjE0MzE5NjIwNDQ5ODI1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=tfJ7twtn-JYQ7kNvwFZeyYY&_nc_oc=Adoa5q1FPy3aQmV6MIN08cjQS9VtIj24kX3odERb_MyawtQ0t_rpDMqEKsiKV4MfszE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQLeD_-PrtMFa61uokURBlynjLBGQ0W3XHDBkqJvib8BdQ&oe=6A9BD161", "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/641772475_18086583209337149_479692075807199771_n.webp?_nc_cat=110&ig_cache_key=Mzg0NjE0MzE5NjIyOTYxNDI5MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=83KIo1kWpuAQ7kNvwECoLyS&_nc_oc=AdohpRLvC78hjx5jpHZeG_-hWWWSS2f6QOHKqAFACBAiN4sNE2w3hXlNvY9sD9tE9T0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQJOP7VICqIvSrYxBs2XhjIu3pwM1gQhHmB1VWBZHTEBNA&oe=6A9BD012", "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/641787995_18086583182337149_9178755058188757775_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=107&ig_cache_key=Mzg0NjE0MzE5NjIwNDQ3MjQ0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=keuDEt8-_XkQ7kNvwEKGSAR&_nc_oc=Ado3MD-CjtaaHR6Jk2yrRIxSt1cO_QJUX616rwo0sOrUkjhqk6TlsmvOeDhVCUHQR_U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQKrkwqbhDxuWmc_mAlykAAtEJcHi77OGvJTOTenfk6CDA&oe=6A9BDD68", "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/641776296_18086583200337149_4724127134025549371_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=111&ig_cache_key=Mzg0NjE0MzE5NjIwNDQ0MzE0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=9k0Nr8qDb0wQ7kNvwHYR6-N&_nc_oc=Adrfo_8wsKMvuzle6LEjh-t52NubTOlNRcn_IwW-A5s5AJjZG2YR7gMBKG0U6UOgeuA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQL-l6YVP5cmtRkIvPtBdOIiDE2v9kKgSMTHDdRZoptqHg&oe=6A9BE0AF", "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642694638_18086583191337149_4092880357027649478_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=107&ig_cache_key=Mzg0NjE0MzE5NjIzODAyMzg0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=oB3Q3B_B3O4Q7kNvwEuXL8W&_nc_oc=AdrTAVXP_LqGzD3--CRGZfhLWjH2OBstaovH4CgbFemw_QtWgOrd_uAkReR6CG8GMGQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQK6F09nVI8LbjFsC8WloZkNQV5vSuI8GFGAidK45__fMw&oe=6A9BB346"], "cover": "https://instagram.fpoz3-1.fna.fbcdn.net/v/t51.82787-15/642740383_18086583164337149_3151972567755723858_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=109&ig_cache_key=Mzg0NjE0MzE5NjIxMjgzNDUxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=xY_VhXbU-nQQ7kNvwGYx9ex&_nc_oc=Ado87thuD3NH5R-fy-tBFz4RSEoOpdXOv1nqrCpAiwNohbt6tk0GlRVRMxOOFE3-WB0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoz3-1.fna&_nc_gid=9fgascQrR9CXqaqZkiUVrQ&_nc_ss=7a22e&oh=00_AQJ2gprNoL4Mg7GE90rSal0fyp4_e249p0EZrFZL9oIqKA&oe=6A9BC8D0"}, {"code": "DUDUVxJgCa6", "title": "Closet Planejado", "category": "Dormitórios", "desc": "Divisões inteligentes, gavetas amplas, cabideiros funcionais e porta de correr para um dia a dia mais organizado.", "caption": "Closet planejado em MDF branco, com divisões inteligentes, gavetas amplas e cabideiros funcionais, além de porta de correr na entrada, garantindo praticidade, organização e elegância no dia a dia. 🤍\n\nQuer um projeto assim? Solicite seu orçamento pelo link na bio. 📲\n\n#MarcenariaSobMedida #marcenariapersonalizada #MarcenariaPremium #acabamentoperfeito #interiores", "url": "https://www.instagram.com/p/DUDUVxJgCa6/", "images": ["https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623117433_18083271866337149_5135155682296685695_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=MzgxOTk4NjE5MzU0MjU1MTQ0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=KeDQabQEUBsQ7kNvwG42WXB&_nc_oc=AdowM4mvTrs8AaD53Rbp5_Kc4W7PBZl5ktqKt7fXnVVNr2z2L_5yG_h8k4Ez2yHvQeg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmao1-1.fna&_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&_nc_ss=7a22e&oh=00_AQLzQsyFrH3rb5TIKDaVjiq_S3Ub4YJ7xU_3dk0NCBv9Cw&oe=6A9BCCDE", "https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623294113_18083271455337149_3964697100079224287_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=109&ig_cache_key=MzgxOTk4MzgxOTc1OTQzMTM1NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=B9FJLhmxZ60Q7kNvwGTQG0l&_nc_oc=AdpWDMeoKX2nfO6IQTThaFihB8vNPJaDlJbl6Qth-KbhPsRLlZI1ahAWnLiDcIprfK4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmao1-1.fna&_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&_nc_ss=7a22e&oh=00_AQJBEk4Ob1ALg3IkaKWK_tdh1pfo9ilbXyL59agtiK-F4Q&oe=6A9BC596", "https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623259946_18083271458337149_5572776949973386147_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=105&ig_cache_key=MzgxOTk4MzgxOTU2NjU0MTMxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ZRrwNVu52_MQ7kNvwElxcDU&_nc_oc=Adp_RD_XQXkydHknN-Q4Yk3vG3BcFNbZljBuiKQU7CBZbkWU8zekLvIUKjb6kSIWWTE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmao1-1.fna&_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&_nc_ss=7a22e&oh=00_AQKqD5Q-gKacV3PslzhM_tRWLSTvCYdYa6AE-UQ0uvjLvw&oe=6A9BE39F", "https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/624641565_18083271467337149_5326416901190713089_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=110&ig_cache_key=MzgxOTk4MzgyMjAwNzYxNjY3MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=V1Epza93HncQ7kNvwEt_mBj&_nc_oc=Adrp3mRisAmDAgCXZdvHSHzZ3QXMG1esfLWj-jS2ql_aKLiUz5p9rCk53GMUaEjw4ow&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmao1-1.fna&_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&_nc_ss=7a22e&oh=00_AQJmKgoTnQkhglZDrwKGZjqYvcT1ZCzSlHS7jcAkQSH6AA&oe=6A9BD2C1"], "cover": "https://instagram.fmao1-1.fna.fbcdn.net/v/t51.82787-15/623117433_18083271866337149_5135155682296685695_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&ig_cache_key=MzgxOTk4NjE5MzU0MjU1MTQ0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=KeDQabQEUBsQ7kNvwG42WXB&_nc_oc=AdowM4mvTrs8AaD53Rbp5_Kc4W7PBZl5ktqKt7fXnVVNr2z2L_5yG_h8k4Ez2yHvQeg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmao1-1.fna&_nc_gid=xpa2Da9R1vxdBFUhvNBoSw&_nc_ss=7a22e&oh=00_AQLzQsyFrH3rb5TIKDaVjiq_S3Ub4YJ7xU_3dk0NCBv9Cw&oe=6A9BCCDE"}, {"code": "DWjAllojptN", "title": "Cozinha Palha & Itapuã", "category": "Cozinhas", "desc": "Tons claros e amadeirados criam um ambiente leve, sofisticado e acolhedor.", "caption": "A combinação do MDF no tom Palha com o amadeirado Itapuã trouxe leveza, sofisticação e aquele toque acolhedor que faz toda a diferença no dia a dia. \n\nNa cozinha, o destaque fica para o equilíbrio entre os tons claros e o amadeirado, valorizado pela iluminação em LED que realça cada detalhe e deixa o ambiente ainda mais moderno e convidativo. \n\nJá no banheiro, o mesmo conceito se mantém: harmonia, elegância e um design clean. \n\nUm projeto pensado para aproveitar cada espaço com beleza, praticidade e personalidade.\n\nPlanejados sob medida fazem toda a diferença! ✨️\n\n#móveisplanejados #mdf #cozinhaplanejada #banheiroplanejado #designdeinteriores", "url": "https://www.instagram.com/p/DWjAllojptN/", "images": ["https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/657723175_18089702801337149_8310543643259892300_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=Mzg2NDkzNTI4NjcwNzIzNDc1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=UhyXDcD7lfMQ7kNvwGeVWVV&_nc_oc=AdpLnzG3QjaGkxylShMmNhLYFHbtoXdcnJy0hGxqiNxlh7NGZimI2jDNWHSPRpdqKcI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=ZBZqB-zrN_BA1B1Kl6Tymw&_nc_ss=7a22e&oh=00_AQJYyf7j0EZ8IdRtoFH-ESoU9J2WkBy-wMwwNoJIzbSTzQ&oe=6A9BE3CD", "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/656753692_18089702525337149_7749235104376342961_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=107&ig_cache_key=Mzg2NDkzMzA3NzI0MDE4Mzc1OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=tW_jwGEqR7IQ7kNvwGqP-Jp&_nc_oc=Adrv7XD-11854iBuy84Obt9WSOCzzoouuJLW_T9NzviAOHvVFBiqBnWavAWme0sD4GQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=ZBZqB-zrN_BA1B1Kl6Tymw&_nc_ss=7a22e&oh=00_AQINKNoETOam4nZcKDsbm7wweZklJuCxkbOOPyHpfI0qEA&oe=6A9BB714"], "cover": "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/657723175_18089702801337149_8310543643259892300_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=Mzg2NDkzNTI4NjcwNzIzNDc1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=UhyXDcD7lfMQ7kNvwGeVWVV&_nc_oc=AdpLnzG3QjaGkxylShMmNhLYFHbtoXdcnJy0hGxqiNxlh7NGZimI2jDNWHSPRpdqKcI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=ZBZqB-zrN_BA1B1Kl6Tymw&_nc_ss=7a22e&oh=00_AQJYyf7j0EZ8IdRtoFH-ESoU9J2WkBy-wMwwNoJIzbSTzQ&oe=6A9BE3CD"}, {"code": "DRU7aXWEW7T", "title": "Painel Integrado para TV", "category": "Salas", "desc": "Painel em alto brilho, ripado com porta integrada e rack em uma composição contínua e contemporânea.", "caption": "Transformando ambientes com funcionalidade e design: painel branco em alto brilho combinado ao ripado com porta integrada e rack, criando um acabamento moderno, contínuo e elegante.\n\n#marcenariapersonalizada #moveisplanejados #painelripado #altobrilho #designdeinteriores #marcenariapratiq #painelplanejado #rackplanejado #portaoculta #decoracao #interiores #arquitetura #ambientesplanejados #sobmedida #designmoderno #madeiraria #acabamentoperfeito #livingroomdecor #homeinspiration #detalhesqueinspiram", "url": "https://www.instagram.com/p/DRU7aXWEW7T/", "images": ["https://instagram.fyto3-1.fna.fbcdn.net/v/t51.82787-15/587198150_18076810658337149_8579237252723999406_n.webp?_nc_cat=107&ig_cache_key=Mzc3MDkwMDA3NjQyOTM4NjA2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=ki8Iu_Hx7t8Q7kNvwFP6c56&_nc_oc=Adr-YCsXJkIdE3CRUEsje7fPvAARvuX5m4g0NaqK6aJL_Rchailzp6Iqql4xPrEgDmQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fyto3-1.fna&_nc_gid=aqJpNnLlNgysMueXxqTdhg&_nc_ss=7a22e&oh=00_AQIj8nOy4D_bv_snZr7Yq1UH7xK8FtaQNntHOnOu2nIPXw&oe=6A9BC419", "https://instagram.fyto3-1.fna.fbcdn.net/v/t51.82787-15/587198150_18076810658337149_8579237252723999406_n.webp?_nc_cat=107&ig_cache_key=Mzc3MDkwMDA3NjQyOTM4NjA2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ki8Iu_Hx7t8Q7kNvwFP6c56&_nc_oc=Adr-YCsXJkIdE3CRUEsje7fPvAARvuX5m4g0NaqK6aJL_Rchailzp6Iqql4xPrEgDmQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fyto3-1.fna&_nc_gid=aqJpNnLlNgysMueXxqTdhg&_nc_ss=7a22e&oh=00_AQIj8nOy4D_bv_snZr7Yq1UH7xK8FtaQNntHOnOu2nIPXw&oe=6A9BC419", "https://instagram.fyto3-1.fna.fbcdn.net/v/t51.82787-15/584653009_18076810667337149_4987210854220610590_n.webp?_nc_cat=104&ig_cache_key=Mzc3MDkwMDA3NjQ0NjE2NTg4Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=7HZWOAw4NCQQ7kNvwFbuM6W&_nc_oc=Adq3pWX-PugSh6XOlVGgiUyx0bxkF0rMKZdN4hY9I44j8nWt8MTH7evFVoga7mF8-4E&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fyto3-1.fna&_nc_gid=aqJpNnLlNgysMueXxqTdhg&_nc_ss=7a22e&oh=00_AQJIvs_z7BAmLTSqWxK5Mc87a58Jqhc0I0fobaC5uaGwcg&oe=6A9BCAD2"], "cover": "https://instagram.fyto3-1.fna.fbcdn.net/v/t51.82787-15/587198150_18076810658337149_8579237252723999406_n.webp?_nc_cat=107&ig_cache_key=Mzc3MDkwMDA3NjQyOTM4NjA2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=ki8Iu_Hx7t8Q7kNvwFP6c56&_nc_oc=Adr-YCsXJkIdE3CRUEsje7fPvAARvuX5m4g0NaqK6aJL_Rchailzp6Iqql4xPrEgDmQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fyto3-1.fna&_nc_gid=aqJpNnLlNgysMueXxqTdhg&_nc_ss=7a22e&oh=00_AQIj8nOy4D_bv_snZr7Yq1UH7xK8FtaQNntHOnOu2nIPXw&oe=6A9BC419"}, {"code": "DRU_lcZgRgE", "title": "Home Office Sob Medida", "category": "Home office", "desc": "Bancada em L, prateleira flutuante e gaveteiro móvel com foco em ergonomia, organização e praticidade.", "caption": "Bancada em “L” com acabamento uniforme, prateleira superior flutuante e gaveteiro móvel sob medida. Um projeto pensado para ergonomia, organização e praticidade no dia a dia. \n\n#MarcenariaSobMedida #marcenariapersonalizada \n#DesignDeInteriores #bancadas #mdfpersonalizado", "url": "https://www.instagram.com/p/DRU_lcZgRgE/", "images": ["https://instagram.fcyw4-1.fna.fbcdn.net/v/t51.82787-15/584079366_18076813067337149_1761546204920758336_n.webp?_nc_cat=105&ig_cache_key=Mzc3MDkxODQzMDI3NDgyMTk5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ckJrc91JtbUQ7kNvwFyvd0X&_nc_oc=AdrBLYykptHY3WMGJs1XDb4wi3YzDF3iFcBkqojUBDxVvdqjv28_d9mrQazD4mXK9nk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcyw4-1.fna&_nc_gid=YwzaSILIOnl11e9Y8Xr--A&_nc_ss=7a22e&oh=00_AQIMBCmI9nyn_nkttYl6sHGZZErIJso0o4s8_MX7puVfrQ&oe=6A9BBFD5", "https://instagram.fcyw4-1.fna.fbcdn.net/v/t51.82787-15/584617074_18076813076337149_168879901581256021_n.webp?_nc_cat=105&ig_cache_key=Mzc3MDkxODQzMDQwMDY0NzMzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMiJ9&_nc_ohc=D6UCUEg6ZpAQ7kNvwG-I2Nm&_nc_oc=Adrfx4kF4rq1sOrmOPy_6axh9Jsenx907yq-DfKI-c93r5OL-s6c-bpgZpvQjG-22cM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcyw4-1.fna&_nc_gid=YwzaSILIOnl11e9Y8Xr--A&_nc_ss=7a22e&oh=00_AQKi6QCbIxg-bRud5QDoN7MOajjyGW0-0dHm4ypqaBAlsQ&oe=6A9BB677"], "cover": "https://instagram.fcyw4-1.fna.fbcdn.net/v/t51.82787-15/584079366_18076813067337149_1761546204920758336_n.webp?_nc_cat=105&ig_cache_key=Mzc3MDkxODQzMDI3NDgyMTk5Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ckJrc91JtbUQ7kNvwFyvd0X&_nc_oc=AdrBLYykptHY3WMGJs1XDb4wi3YzDF3iFcBkqojUBDxVvdqjv28_d9mrQazD4mXK9nk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcyw4-1.fna&_nc_gid=YwzaSILIOnl11e9Y8Xr--A&_nc_ss=7a22e&oh=00_AQIMBCmI9nyn_nkttYl6sHGZZErIJso0o4s8_MX7puVfrQ&oe=6A9BBFD5"}];
+const filters=document.querySelectorAll('.filter');
+const cards=document.querySelectorAll('.project-card');
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+  filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const f=btn.dataset.filter;
+  cards.forEach(c=>c.classList.toggle('hidden',f!=='Todos'&&c.dataset.category!==f));
+}));
+function openProject(i){
+ const p=projects[i], modal=document.getElementById('projectModal');
+ document.getElementById('modalTitle').textContent=p.title;
+ document.getElementById('modalDesc').textContent=p.desc;
+ document.getElementById('modalGallery').innerHTML=p.images.map((src,j)=>`<img src="${src}" alt="${p.title}" referrerpolicy="no-referrer">`).join('');
+ document.getElementById('modalWhatsapp').href='https://wa.me/5514997940894?text='+encodeURIComponent('Olá Pratiq! Vi o projeto "'+p.title+'" no site e gostaria de fazer um orçamento para algo parecido.');
+ modal.classList.add('open');document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('projectModal').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('projectModal').addEventListener('click',e=>{if(e.target.id==='projectModal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+document.querySelectorAll('.project-card').forEach((c,i)=>c.addEventListener('keydown',e=>{if(e.key==='Enter')openProject(i)}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
