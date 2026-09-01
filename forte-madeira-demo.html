@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forte Madeira | Marcenaria e Carpintaria em Botucatu</title>
+<meta name="description" content="Projetos exclusivos em madeira maciça, marcenaria e carpintaria sob medida em Botucatu-SP, atendendo residências, empresas e ambientes especiais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4efe7;
+  --paper:#fffaf2;
+  --ink:#17120d;
+  --muted:#746a5d;
+  --brown:#4f2f1e;
+  --brown2:#24170f;
+  --cedar:#8f653e;
+  --gold:#b89967;
+  --green:#1f3329;
+  --line:#ded2c2;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+button{font:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.topbar{background:var(--brown2);color:#e8d8c5;text-align:center;padding:9px 14px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:30;background:rgba(244,239,231,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(79,47,30,.12)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+.brand{display:flex;align-items:center;gap:13px}
+.mark{width:42px;height:42px;border-radius:50%;background:var(--brown2);color:#f3dcc1;display:grid;place-items:center;font-family:"Fraunces",serif;font-size:18px;letter-spacing:.04em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.brand-text strong{display:block;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.brand-text span{display:block;margin-top:4px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.menu{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:700}
+.menu a:not(.btn){color:#3d3329}
+.menu a:not(.btn):hover{color:var(--cedar)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 19px;background:var(--brown2);color:#fff8ee;font-weight:800;font-size:13px;border:1px solid var(--brown2);transition:.22s ease}
+.btn:hover{transform:translateY(-1px);background:var(--green);border-color:var(--green)}
+.btn.light{background:#fff8ee;color:var(--brown2);border-color:rgba(79,47,30,.22)}
+.btn.ghost{background:transparent;color:white;border-color:rgba(255,255,255,.44)}
+.hero{position:relative;min-height:790px;display:grid;align-items:end;color:white;background:#19110c;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{height:100%;object-fit:cover;object-position:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,12,8,.84),rgba(18,12,8,.54) 45%,rgba(18,12,8,.16) 78%),linear-gradient(0deg,rgba(18,12,8,.60),transparent 52%)}
+.hero-inner{position:relative;z-index:2;padding:112px 0 86px;max-width:720px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+h1,h2,h3{margin:0}
+h1,.display{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-.035em}
+h1{font-size:clamp(54px,7vw,94px);line-height:.92;margin:21px 0 24px;max-width:760px}
+.hero p{font-size:18px;line-height:1.72;color:rgba(255,255,255,.82);max-width:610px;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-card{position:absolute;z-index:3;right:max(24px,calc((100vw - 1180px)/2));bottom:34px;width:330px;background:rgba(255,250,242,.93);color:var(--ink);padding:22px;border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(16px)}
+.hero-card strong{display:block;font-family:"Fraunces",serif;font-size:28px;font-weight:500;color:var(--brown2)}
+.hero-card span{display:block;color:var(--muted);font-size:13px;line-height:1.55;margin-top:7px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+.stat{background:var(--paper);padding:26px 24px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-family:"Fraunces",serif;font-size:31px;font-weight:500;color:var(--brown)}
+.stat span{display:block;margin-top:5px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+section{padding:104px 0}
+.intro{display:grid;grid-template-columns:.88fr 1.12fr;gap:78px;align-items:start}
+.section-title{font-family:"Fraunces",serif;font-size:clamp(40px,5vw,66px);line-height:1.02;font-weight:500;letter-spacing:-.035em}
+.lead{font-size:17px;line-height:1.85;color:var(--muted);margin:22px 0 0;max-width:660px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:54px}
+.principle{background:var(--bg);padding:30px}
+.principle i{font-style:normal;font-family:"Fraunces",serif;font-size:30px;color:var(--cedar)}
+.principle h3{font-size:17px;margin:18px 0 10px}
+.principle p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+.portfolio{background:#ebe1d4}
+.portfolio-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:38px}
+.portfolio-head p{max-width:440px;margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px}
+.filter{border:1px solid rgba(79,47,30,.18);background:transparent;border-radius:999px;padding:10px 15px;font-size:12px;font-weight:800;color:#5e5044;cursor:pointer}
+.filter.active{background:var(--brown2);color:#fff8ee;border-color:var(--brown2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project{background:var(--paper);border:1px solid rgba(79,47,30,.14);overflow:hidden;transition:.25s ease}
+.project.hidden{display:none}
+.project:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(50,32,20,.14)}
+.photo{aspect-ratio:4/5;position:relative;overflow:hidden;background:#d4c2ad}
+.photo img{height:100%;object-fit:cover;transition:.55s ease}
+.project:hover .photo img{transform:scale(1.035)}
+.tag{position:absolute;left:15px;top:15px;background:rgba(255,250,242,.92);color:var(--brown2);border-radius:99px;padding:8px 11px;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.project-body{padding:22px}
+.project-body h3{font-family:"Fraunces",serif;font-weight:500;font-size:25px;line-height:1.08}
+.project-body p{font-size:13px;color:var(--muted);line-height:1.68;min-height:88px;margin:12px 0 18px}
+.project-body a{font-size:13px;font-weight:900;color:var(--cedar)}
+.feature{padding:0;background:var(--brown2);color:white}
+.feature-wrap{display:grid;grid-template-columns:1.05fr .95fr;min-height:650px}
+.feature-image{background:url("https://instagram.fykz1-1.fna.fbcdn.net/v/t51.82787-15/774105393_18435596323127582_2045481043712724837_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzk2NTA4NDU1OTYzNjI3ODY3MDE4NDM1NTk2MzE3MTI3NTgy.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjExNzguc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=A_wZDFcckeoQ7kNvwFR5sxg&_nc_oc=AdoITsICsjeyBAWhG_TqB1L72uVLbwjyYgx4vFh0ugw_JMPTsMDsJ3AiYljmEEyxwRbkNtG4ADu7J2Fl4OkQq3rU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fykz1-1.fna&_nc_gid=MPl3tU-j6GdoBB1VBGkJ7A&_nc_ss=7a22e&oh=00_AQKjMpjaCWBlx63PmAytQOUEnpxDXDOnE2DXFr95jNHE9Q&oe=6A9CDFF7") center/cover}
+.feature-copy{padding:86px clamp(34px,6vw,92px);display:flex;justify-content:center;flex-direction:column}
+.feature-copy .eyebrow{color:#d1b98f}
+.feature-copy .section-title{font-size:clamp(40px,5vw,62px)}
+.feature-copy p{color:rgba(255,255,255,.72);font-size:15px;line-height:1.85;margin:22px 0 0}
+.materials{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.material{border-top:1px solid rgba(255,255,255,.16);padding-top:15px}
+.material strong{display:block;font-size:14px}
+.material span{display:block;margin-top:6px;font-size:12px;color:rgba(255,255,255,.62);line-height:1.55}
+.process{background:var(--paper)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:42px}
+.step{background:var(--paper);padding:30px 28px;min-height:218px}
+.step span{font-family:"Fraunces",serif;font-size:30px;color:var(--cedar)}
+.step h3{font-size:17px;margin:28px 0 9px}
+.step p{font-size:13px;color:var(--muted);line-height:1.65;margin:0}
+.quote{background:var(--green);color:white}
+.quote .container{display:grid;grid-template-columns:.72fr 1.28fr;gap:72px;align-items:center}
+.quote-mark{width:180px;height:180px;border:1px solid rgba(255,255,255,.22);border-radius:50%;display:grid;place-items:center;font-family:"Fraunces",serif;font-size:58px;color:#d6bc90}
+.quote blockquote{margin:0;font-family:"Fraunces",serif;font-size:clamp(35px,4.2vw,58px);line-height:1.08;font-weight:500;letter-spacing:-.035em}
+.quote p{margin:22px 0 0;color:rgba(255,255,255,.72);font-size:15px;line-height:1.75;max-width:740px}
+.cta{background:#ded0bd}
+.cta-box{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.cta p{color:var(--muted);line-height:1.75;font-size:15px;margin:18px 0 28px;max-width:540px}
+footer{background:#120d09;color:#ead9c4;padding:44px 0}
+.footer{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.footer small{display:block;margin-top:10px;color:#9d8870}
+.float{position:fixed;right:21px;bottom:21px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1f6d4f;color:white;display:grid;place-items:center;font-size:12px;font-weight:900;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:980px){
+  .menu a:not(.btn){display:none}
+  .hero{min-height:720px}
+  .hero-card{display:none}
+  .intro,.feature-wrap,.quote .container,.cta-box{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .portfolio-head{display:block}
+  .portfolio-head p{margin-top:18px}
+  .process-grid,.principles{grid-template-columns:1fr 1fr}
+  .feature-image{min-height:520px}
+}
+@media(max-width:640px){
+  .container{width:calc(100% - 28px)}
+  .topbar{font-size:9px}
+  .nav{height:68px}
+  .brand-text span{display:none}
+  .menu .btn{padding:10px 13px;font-size:11px}
+  .hero{min-height:690px}
+  .hero-inner{padding:90px 0 60px}
+  h1{font-size:54px}
+  .hero p{font-size:16px}
+  section{padding:74px 0}
+  .stats,.grid,.process-grid,.principles,.materials{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0}
+  .photo{aspect-ratio:1/1}
+  .feature-image{min-height:430px}
+  .feature-copy{padding:58px 24px}
+  .quote-mark{width:132px;height:132px}
+  .actions{flex-direction:column;align-items:flex-start}
+  .actions .btn{width:100%;max-width:310px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">Marcenaria e carpintaria em madeira maciça - Botucatu-SP</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="mark">FM</div>
+      <div class="brand-text"><strong>Forte Madeira</strong><span>Projetos exclusivos</span></div>
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#portfolio">Projetos</a>
+      <a href="#madeira">Madeira maciça</a>
+      <a href="#processo">Processo</a>
+      <a class="btn" href="https://wa.me/5514996568812?text=Ola%2C%20vi%20o%20site%20da%20Forte%20Madeira%20e%20gostaria%20de%20solicitar%20um%20orcamento." target="_blank" rel="noopener">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://instagram.fvix13-1.fna.fbcdn.net/v/t51.82787-15/785282559_18437913271127582_4891505788155334168_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzk3NTIxMDI5NTAxNzk4Njg1NTE4NDM3OTEzMjY4MTI3NTgy.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=hY4OYsz35SoQ7kNvwGZ-5Fz&_nc_oc=Ado3Le1b6OSoBtu89kXholGHDiJsdbDIx5-DzpfZA3GVK_aNbZfWWHoqmp_n-3a7jYM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fvix13-1.fna&_nc_gid=ZHOvox-CelYfx0uu9nPTRQ&_nc_ss=7a22e&oh=00_AQJStjaQVBBX6a1Y0SICJJOH3GMrpcMkkj9_Xt4NLQdvNQ&oe=6A9CD958" alt="Projeto rústico em madeira maciça da Forte Madeira" referrerpolicy="no-referrer">
+  </div>
+  <div class="container hero-inner">
+    <div class="eyebrow">De Botucatu para todo o Brasil</div>
+    <h1>Madeira de verdade para projetos que atravessam gerações.</h1>
+    <p>Marcenaria e carpintaria especializadas em peças exclusivas, ambientes sob medida e acabamentos em madeira maciça para residências, empresas e projetos especiais.</p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/5514996568812?text=Ola%2C%20gostaria%20de%20fazer%20um%20orcamento%20com%20a%20Forte%20Madeira." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn ghost" href="#portfolio">Ver projetos recentes</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <strong>10 anos</strong>
+    <span>criando peças e projetos em madeira com foco em resistência, beleza natural e acabamento cuidadoso.</span>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><strong>12,3k</strong><span>seguidores</span></div>
+  <div class="stat"><strong>524</strong><span>publicações</span></div>
+  <div class="stat"><strong>Brasil</strong><span>atendimento sob medida</span></div>
+</div>
+
+<section>
+  <div class="container intro reveal">
+    <div>
+      <div class="eyebrow">A Forte Madeira</div>
+    </div>
+    <div>
+      <h2 class="section-title">Projetos exclusivos em madeira, pensados para uso real.</h2>
+      <p class="lead">A Forte Madeira une marcenaria, carpintaria e seleção de madeiras nobres para criar mesas, cozinhas, áreas gourmet, corrimãos, lavabos, portas, janelas e soluções personalizadas. O resultado procura equilibrar presença, durabilidade e conforto visual.</p>
+      <div class="principles">
+        <div class="principle"><i>01</i><h3>Madeira maciça</h3><p>Garapeira, Ipê, Peroba Rosa e outras espécies usadas conforme o desenho, resistência e acabamento desejado.</p></div>
+        <div class="principle"><i>02</i><h3>Sob medida</h3><p>Peças desenvolvidas para encaixar no ambiente, no uso e no estilo de cada cliente.</p></div>
+        <div class="principle"><i>03</i><h3>Acabamento</h3><p>Textura, proteção, proporção e instalação pensadas para valorizar a madeira ao longo do tempo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-head reveal">
+      <div>
+        <div class="eyebrow">Projetos recentes</div>
+        <h2 class="section-title">Uma amostra do que sai da marcenaria.</h2>
+      </div>
+      <p>Trabalhos recentes publicados pela Forte Madeira, organizados como um portfólio consultivo para facilitar o pedido de orçamento.</p>
+    </div>
+    <div class="filters reveal">
+      <button class="filter active" data-filter="Todos">Todos</button>
+      <button class="filter" data-filter="Areas">Áreas de lazer</button>
+      <button class="filter" data-filter="Escadas">Escadas</button>
+      <button class="filter" data-filter="Cozinhas">Cozinhas</button>
+      <button class="filter" data-filter="Banheiros">Banheiros</button>
+      <button class="filter" data-filter="Mesas">Mesas</button>
+    </div>
+    <div class="grid">
+      <article class="project reveal" data-category="Areas">
+        <div class="photo"><img src="https://instagram.fvix13-1.fna.fbcdn.net/v/t51.82787-15/785282559_18437913271127582_4891505788155334168_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzk3NTIxMDI5NTAxNzk4Njg1NTE4NDM3OTEzMjY4MTI3NTgy.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=hY4OYsz35SoQ7kNvwGZ-5Fz&_nc_oc=Ado3Le1b6OSoBtu89kXholGHDiJsdbDIx5-DzpfZA3GVK_aNbZfWWHoqmp_n-3a7jYM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fvix13-1.fna&_nc_gid=ZHOvox-CelYfx0uu9nPTRQ&_nc_ss=7a22e&oh=00_AQJStjaQVBBX6a1Y0SICJJOH3GMrpcMkkj9_Xt4NLQdvNQ&oe=6A9CD958" alt="Área de lazer com madeira maciça" loading="lazy" referrerpolicy="no-referrer"><span class="tag">Áreas</span></div>
+        <div class="project-body"><h3>Área de lazer rústica</h3><p>Madeira maciça para criar espaços de encontro com presença, aconchego e resistência para o uso em família.</p><a href="https://www.instagram.com/p/DcqyLOmBdsn/" target="_blank" rel="noopener">Ver publicação</a></div>
+      </article>
+      <article class="project reveal" data-category="Escadas">
+        <div class="photo"><img src="https://instagram.fpoa4-1.fna.fbcdn.net/v/t51.82787-15/780075354_18436515289127582_5922776726382899854_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=101&ig_cache_key=Mzk2ODg3MTczMjM0NzE5Njc4NzE4NDM2NTE1Mjg2MTI3NTgy.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=4cKx0bWzI-IQ7kNvwGXr47J&_nc_oc=AdoAbptydxtOdi0SZlcxVxeHpV96Aem7GpUEJLr4Zj7FeiqniIfd50DCDSxe00h5LF8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fpoa4-1.fna&_nc_gid=qjQyIApICBKxEX_1pkWXIA&_nc_ss=7a22e&oh=00_AQKEpZPhOLR21CeLHyFkYGhEsVdbbvFYntwu_AQ4Pbo1Pw&oe=6A9CCA5F" alt="Corrimão de escada em Ipê maciço" loading="lazy" referrerpolicy="no-referrer"><span class="tag">Escadas</span></div>
+        <div class="project-body"><h3>Corrimão em Ipê</h3><p>Corrimão de escada produzido sob medida, com o desenho da madeira como detalhe principal do ambiente.</p><a href="https://www.instagram.com/p/DcUQ9AFpNVz/" target="_blank" rel="noopener">Ver publicação</a></div>
+      </article>
+      <article class="project reveal" data-category="Cozinhas">
+        <div class="photo"><img src="https://instagram.fykz1-1.fna.fbcdn.net/v/t51.82787-15/774105393_18435596323127582_2045481043712724837_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=Mzk2NTA4NDU1OTYzNjI3ODY3MDE4NDM1NTk2MzE3MTI3NTgy.3-ccb7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjExNzguc2RyLnZpZGVvX2RlZmF1bHRfY292ZXJfZnJhbWUuQzMifQ%3D%3D&_nc_ohc=A_wZDFcckeoQ7kNvwFR5sxg&_nc_oc=AdoITsICsjeyBAWhG_TqB1L72uVLbwjyYgx4vFh0ugw_JMPTsMDsJ3AiYljmEEyxwRbkNtG4ADu7J2Fl4OkQq3rU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fykz1-1.fna&_nc_gid=MPl3tU-j6GdoBB1VBGkJ7A&_nc_ss=7a22e&oh=00_AQKjMpjaCWBlx63PmAytQOUEnpxDXDOnE2DXFr95jNHE9Q&oe=6A9CDFF7" alt="Projeto Farmhouse com madeira protagonista" loading="lazy" referrerpolicy="no-referrer"><span class="tag">Cozinhas</span></div>
+        <div class="project-body"><h3>Farmhouse contemporâneo</h3><p>Tons neutros, texturas naturais e madeira como protagonista em um projeto com clima de casa de campo.</p><a href="https://www.instagram.com/p/DcGz2Ypga2O/" target="_blank" rel="noopener">Ver publicação</a></div>
+      </article>
+      <article class="project reveal" data-category="Banheiros">
+        <div class="photo"><img src="https://scontent-ham3-1.cdninstagram.com/v/t51.82787-15/772632243_18435048049127582_7351200182656254516_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=Mzk2MzA0MDQzNjYxNjI5OTUxMTE4NDM1MDQ4MDQzMTI3NTgy.3-ccb7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjcyMC5zZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMyJ9&_nc_ohc=Qy-KT6uUn2EQ7kNvwEIhobB&_nc_oc=AdrlIczjt3nIwRR1r-zrjOX4pkO9vXJOcZPRsxHxZSWSVIZ5zzjoXQNH5JxeBAR35G0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ham3-1.cdninstagram.com&_nc_gid=QJIjjuXgqb8-ev_bB0yccg&_nc_ss=7a22e&oh=00_AQIr5-cgMuecuzCqwoiasuPuBSwYwDvgMg8wcitWmja84g&oe=6A9CD951" alt="Gabinete de banheiro sob medida" loading="lazy" referrerpolicy="no-referrer"><span class="tag">Banheiros</span></div>
+        <div class="project-body"><h3>Gabinetes sob medida</h3><p>Marcenaria funcional para banheiros, com desenho simples, proporção limpa e aproveitamento inteligente.</p><a href="https://www.instagram.com/p/Db_jEevBgP3/" target="_blank" rel="noopener">Ver publicação</a></div>
+      </article>
+      <article class="project reveal" data-category="Mesas">
+        <div class="photo"><img src="https://scontent-ham3-1.cdninstagram.com/v/t51.71878-15/719992497_2853571524987024_1986476675058869804_n.jpg?stp=dst-jpegr_e15_tt6&_nc_cat=100&ig_cache_key=MzkxNjUwMzM2OTQyNjI5ODQ0Ng%3D%3D.3-ccb7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNMSVBTLnhwaWRzLjY0MC5oZHIudmlkZW9fZGVmYXVsdF9jb3Zlcl9mcmFtZS5DMiJ9&_nc_ohc=4-oYDi98uu8Q7kNvwGPEESB&_nc_oc=Adr9Q3erMLfP4YBYliUr8flv8iRIYA4qllw3KHtv63DFQxHHPY_fWQeUMwEYOSiZUJA&_nc_ad=z-m&_nc_cid=1088&_nc_zt=23&se=-1&_nc_ht=scontent-ham3-1.cdninstagram.com&_nc_gid=tg-0KZVZzvyIjDUqWjEtWw&_nc_ss=7a22e&oh=00_AQIwLRU6tWipuWUqGhGJJyNZw5ZuvY4y2rvVnqFYUvV4zw&oe=6A9CD685" alt="Mesa cascata em Garapeira" loading="lazy" referrerpolicy="no-referrer"><span class="tag">Mesas</span></div>
+        <div class="project-body"><h3>Mesa cascata em Garapeira</h3><p>Peça de 5,20 metros para até 18 pessoas, feita para ocupar o centro de grandes encontros.</p><a href="https://www.instagram.com/p/DZaNxBgRmZO/" target="_blank" rel="noopener">Ver publicação</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="madeira">
+  <div class="feature-wrap">
+    <div class="feature-image" aria-label="Projeto em madeira maciça"></div>
+    <div class="feature-copy">
+      <div class="eyebrow">Madeira como protagonista</div>
+      <h2 class="section-title">Rústico, elegante e feito para durar.</h2>
+      <p>A linguagem da Forte Madeira valoriza veios aparentes, tons naturais, superfícies robustas e proporções que deixam a matéria-prima respirar. Cada escolha de madeira muda o resultado: do Ipê de alta resistência à Peroba Rosa de demolição com história própria.</p>
+      <div class="materials">
+        <div class="material"><strong>Garapeira</strong><span>Para mesas e peças de impacto, com presença visual marcante.</span></div>
+        <div class="material"><strong>Ipê maciço</strong><span>Indicado quando resistência e acabamento precisam caminhar juntos.</span></div>
+        <div class="material"><strong>Peroba Rosa</strong><span>Madeira nobre para lavabos, pranchas, prateleiras e detalhes especiais.</span></div>
+        <div class="material"><strong>Projetos especiais</strong><span>Residências, empresas, igrejas e ambientes comerciais sob medida.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="processo">
+  <div class="container">
+    <div class="eyebrow reveal">Processo</div>
+    <h2 class="section-title reveal">Da ideia ao encaixe final.</h2>
+    <div class="process-grid">
+      <div class="step reveal"><span>01</span><h3>Conversa</h3><p>Entendimento do ambiente, uso, medidas, referências e tipo de madeira desejado.</p></div>
+      <div class="step reveal"><span>02</span><h3>Projeto</h3><p>Definição da solução, proporções, acabamentos e cuidados técnicos para o espaço.</p></div>
+      <div class="step reveal"><span>03</span><h3>Produção</h3><p>Execução na marcenaria com atenção à estrutura, veios, encaixes e proteção.</p></div>
+      <div class="step reveal"><span>04</span><h3>Instalação</h3><p>Montagem no local e ajustes finais para entregar a peça pronta para a rotina.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="container">
+    <div class="quote-mark reveal">10</div>
+    <div class="reveal">
+      <blockquote>Uma marcenaria para quem prefere matéria-prima real, desenho sob medida e acabamento sem pressa.</blockquote>
+      <p>Esse posicionamento foi construído a partir do próprio perfil da Forte Madeira: projetos exclusivos em madeira, 10 anos realizando trabalhos e atendimento de Botucatu-SP para o Brasil.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-box">
+    <div class="reveal">
+      <div class="eyebrow">Orçamento</div>
+      <h2 class="section-title">Tem um projeto em madeira para tirar do papel?</h2>
+    </div>
+    <div class="reveal">
+      <p>Envie medidas, fotos do ambiente ou uma referência do que você imagina. A Forte Madeira pode orientar a melhor solução em madeira maciça, marcenaria ou carpintaria sob medida.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/5514996568812?text=Ola%2C%20vi%20o%20site%20da%20Forte%20Madeira%20e%20gostaria%20de%20solicitar%20um%20orcamento%20para%20um%20projeto%20em%20madeira." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn light" href="https://www.instagram.com/fortemadeirabotucatu/" target="_blank" rel="noopener">Ver Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div>
+      <div class="brand">
+        <div class="mark">FM</div>
+        <div class="brand-text"><strong>Forte Madeira</strong><span>Marcenaria e carpintaria</span></div>
+      </div>
+      <small>Botucatu-SP - atendimento para projetos exclusivos em madeira.</small>
+    </div>
+    <small>Demo comercial baseada em informações públicas do Instagram.</small>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/5514996568812?text=Ola%2C%20gostaria%20de%20falar%20com%20a%20Forte%20Madeira." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WA</a>
+
+<script>
+const filters=document.querySelectorAll(".filter");
+const projects=document.querySelectorAll(".project");
+filters.forEach((button)=>{
+  button.addEventListener("click",()=>{
+    filters.forEach((item)=>item.classList.remove("active"));
+    button.classList.add("active");
+    const selected=button.dataset.filter;
+    projects.forEach((project)=>{
+      project.classList.toggle("hidden",selected!=="Todos"&&project.dataset.category!==selected);
+    });
+  });
+});
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting)entry.target.classList.add("visible");
+  });
+},{threshold:.08});
+document.querySelectorAll(".reveal").forEach((element)=>observer.observe(element));
+</script>
+</body>
+</html>
